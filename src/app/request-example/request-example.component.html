@@ -1,0 +1,13 @@
+<ng-container *ngIf="!characterList.length">
+    <img src="https://c.tenor.com/3hIpHNbcVf4AAAAC/rick-and-morty-rick.gif" alt="Loading"/>
+    <h1>Loading</h1>
+</ng-container>
+<ng-container *ngIf="characterList.length">
+    <h3>Rick & Morty</h3>
+    <ul>
+        <li *ngFor="let character of characterList">
+            <h3>{{character.id}} - {{character.name}}</h3>
+            <p>Status: {{character.status}}</p>
+            <img src="{{character.image}}" alt="{{character.name}}"/>
+    </ul>
+</ng-container>
